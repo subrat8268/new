@@ -20,24 +20,18 @@
         width: 100%;
       }
 
-      .fixed {
-        /* width: 200px; */
-        /* background-color: #f4f4f4; */
-        padding: 20px;
-        position: fixed;
-        top: 60px;
-        left: 0;
+      .container{
+        display: flex;
       }
-
-      #sidebar{
-        width: 30%;
+      #sidebar {
+        width: 20%;
+        border: 5px solid rgb(50, 40, 40);
+        /* min-height: 500vh; */
       }
 
       .main-content {
-        width: 8
-        70%;
+        width: 80%;
         margin-top: 20px;
-        margin-left: 220px; /* adjust based on sidebar width */
         padding: 20px;
       }
     </style>
@@ -45,83 +39,85 @@
   <body>
     <div id="topbar">Top Bar - Always On</div>
 
-    <div class="fixed" id="sidebar">
-      <h2>News & Updates</h2>
-      <p>Some content in the sidebar.</p>
-      <p>Some content in the sidebar.</p>
-      <p>Some content in the sidebar.</p>
-      <p>Some content in the sidebar.</p>
-      <p>Some content in the sidebar.</p>
-      <p>Some content in the sidebar.</p>
-      <p>Some content in the sidebar.</p>
-      <p>Some content in the sidebar.</p>
-      <p>Some content in the sidebar.</p>
-      <p>Some content in the sidebar.</p>
-      <p>Some content in the sidebar.</p>
-      <p>Some content in the sidebar.</p>
-      <p>Some content in the sidebar.</p>
-      <p>Some content in the sidebar.</p>
-      <p>Some content in the sidebar.</p>
-      <p>Some content in the sidebar.</p>
-      <p>Some content in the sidebar.</p>
-      <p>Some content in the sidebar.</p>
-      <p>Some content in the sidebar.</p>
-      <p>Some content in the sidebar.</p>
-      <p>Some content in the sidebar.</p>
-      <p>Some content in the sidebar.</p>
-      <p>Some content in the sidebar.</p>
-      <p>Some content in the sidebar.</p>
-      <p>Some content in the sidebar.</p>
-      <p>Some content in the sidebar.</p>
-      <!-- Add more content as needed -->
-    </div>
+    <div class="container">
+      <div class="fixed" id="sidebar">
+        <h2>News & Updates</h2>
+        <p>Some content in the sidebar.</p>
+        <p>Some content in the sidebar.</p>
+        <p>Some content in the sidebar.</p>
+        <p>Some content in the sidebar.</p>
+        <p>Some content in the sidebar.</p>
+        <p>Some content in the sidebar.</p>
+        <p>Some content in the sidebar.</p>
+        <p>Some content in the sidebar.</p>
+        <p>Some content in the sidebar.</p>
+        <p>Some content in the sidebar.</p>
+        <p>Some content in the sidebar.</p>
+        <p>Some content in the sidebar.</p>
+        <p>Some content in the sidebar.</p>
+        <p>Some content in the sidebar.</p>
+        <p>Some content in the sidebar.</p>
+        <p>Some content in the sidebar.</p>
+        <p>Some content in the sidebar.</p>
+        <p>Some content in the sidebar.</p>
+        <p>Some content in the sidebar.</p>
+        <p>Some content in the sidebar.</p>
+        <p>Some content in the sidebar.</p>
+        <p>Some content in the sidebar.</p>
+        <p>Some content in the sidebar.</p>
+        <p>Some content in the sidebar.</p>
+        <p>Some content in the sidebar.</p>
+        <p>Some content in the sidebar.</p>
+        <!-- Add more content as needed -->
+      </div>
 
-    <div class="main-content" id="main-content">
-      <h1>Main Section</h1>
-      <h1>Main Section</h1>
-      <h1>Main Section</h1>
-      <h1>Main Sdection</h1>
-      <h1>Main Sdection</h1>
-      <h1>Main Sdection</h1>
-      <h1>Main Sdection</h1>
-      <h1>Main Sdection</h1>
-      <h1>Main Section</h1>
-      <h1>Main Section</h1>
-      <h1>Main Section</h1>
-      <h1>Main Section</h1>
-      <h1>Main Section</h1>
-      <h1>Main Section</h1>
-      <h1>Main Section</h1>
-      <h1>Main Section</h1>
-      <p>Main content goes here.</p>
-      <!-- Add more content as needed -->
+      <div class="main-content" id="main-content">
+        <h1>Top Main Section</h1>
+        <h1>Main Section</h1>
+        <h1>Main Section</h1>
+        <h1>Main Sdection</h1>
+        <h1>Main Sdection</h1>
+        <h1>Main Sdection</h1>
+        <h1>Main Sdection</h1>
+        <h1>Main Sdection</h1>
+        <h1>Main Section</h1>
+        <h1>Main Section</h1>
+        <h1>Main Section</h1>
+        <h1>Main Section</h1>
+        <h1>Main Section</h1>
+        <h1>Main Section</h1>
+        <h1>Main Section</h1>
+        <h1>Main Section</h1>
+        <p>Main content goes here.</p>
+        <!-- Add more content as needed -->
+      </div>
     </div>
 
     <script>
       // Individual scrolling action for sidebar and main section
-      var sidebar = document.querySelector("#sidebar");
-      var mainContent = document.getElementById("main-content");
+      //   var sidebar = document.querySelector("#sidebar");
+      //   var mainContent = document.getElementById("main-content");
 
-      mainContent.addEventListener("hover", function () {
-        sidebar.classList.add("fixed");
-      });
+      //   mainContent.addEventListener("hover", function () {
+      //     sidebar.classList.add("fixed");
+      //   });
 
-    //   mainContent.addEventListener("mouseout", function () {
-    //     sidebar.classList.remove("fixed");
-    //   });
+      // //   mainContent.addEventListener("mouseout", function () {
+      // //     sidebar.classList.remove("fixed");
+      // //   });
 
-      sidebar.addEventListener("hover", function () {
-        mainContent.classList.add("fixed");
-      });
+      //   sidebar.addEventListener("hover", function () {
+      //     mainContent.classList.add("fixed");
+      //   });
 
-    //   sidebar.addEventListener("mouseout", function () {
-    //     mainContent.classList.remove("fixed");
-    //   });
+      // //   sidebar.addEventListener("mouseout", function () {
+      // //     mainContent.classList.remove("fixed");
+      // //   });
 
-      window.onscroll = function () {
-        sidebar.scrollTop = window.scrollY;
-        mainContent.scrollTop = window.scrollY;
-      };
+      //   window.onscroll = function () {
+      //     sidebar.scrollTop = window.scrollY;
+      //     mainContent.scrollTop = window.scrollY;
+      //   };
     </script>
   </body>
 </html>
